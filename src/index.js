@@ -1,1 +1,1 @@
-export { default as BRQSmartPopup } from "./BRQSmartPopup.jsx";
+export { default as BRQSmartPopup } from "./BRQSmartPopup";
