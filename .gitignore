@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+# IMPORTANT: Don't ignore /dist if you want to publish built files in your GitHub repo for direct installs!
+# So comment this out or remove if you want dist/ committed:
+# dist/
+
+# Ignore local environment files
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Optional: Ignore coverage reports
+coverage/

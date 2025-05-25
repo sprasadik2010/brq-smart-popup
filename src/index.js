@@ -1,0 +1,1 @@
+export { default as BRQSmartPopup } from "./BRQSmartPopup.jsx";
