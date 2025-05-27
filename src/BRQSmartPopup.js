@@ -118,26 +118,48 @@ export default function BRQSmartPopup({
         top: position.top + 4,
         left: position.left,
         width: position.width,
+        maxHeight: "320px",
+        overflowY: "auto",
+        padding: "8px",
+        backgroundColor: "white",
+        border: "1px solid #e5e7eb",
+        boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+        borderRadius: "12px",
         zIndex: 9999,
       }}
-      className="max-h-80 overflow-y-auto space-y-2 p-2 bg-white border border-gray-200 shadow rounded-xl"
     >
       {filteredData.length === 0 && (
-        <div className="p-2 text-gray-500 text-sm">No matches found.</div>
+        <div
+          style={{
+            padding: "8px",
+            fontSize: "14px",
+            color: "#6b7280",
+          }}
+        >
+          No matches found.
+        </div>
       )}
       {filteredData.map((item, index) => (
         <div
           key={index}
           onClick={() => fillForm(item)}
-          className={`rounded-xl p-4 shadow cursor-pointer border transition ${
-            highlightIndex === index
-              ? "bg-blue-100 border-blue-400"
-              : "bg-white hover:bg-gray-50 border-gray-200"
-          }`}
+          style={{
+            borderRadius: "12px",
+            padding: "12px",
+            marginBottom: "8px",
+            boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
+            border: "1px solid",
+            borderColor:
+              highlightIndex === index ? "#60a5fa" : "#e5e7eb",
+            backgroundColor:
+              highlightIndex === index ? "#dbeafe" : "#ffffff",
+            cursor: "pointer",
+            transition: "background-color 0.2s ease",
+          }}
         >
           {displayFields.map((field, i) => (
-            <div key={i} className="text-sm text-gray-700">
-              <span className="font-semibold text-gray-800">
+            <div key={i} style={{ fontSize: "14px", color: "#374151" }}>
+              <span style={{ fontWeight: "600", color: "#1f2937" }}>
                 {field.split(".").pop()}:
               </span>{" "}
               {getValueByPath(item, field)}
